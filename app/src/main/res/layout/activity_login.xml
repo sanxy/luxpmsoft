@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LoginActivity">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_zero"
+        android:layout_marginTop="@dimen/large_button_size"
+        android:layout_marginBottom="@dimen/margin_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/gradation" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/logo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login"
+        android:textColor="#0A0A0A"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.011" />
+
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="@dimen/margin_start"
+        android:orientation="vertical"
+        android:weightSum="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_text">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            android:textSize="@dimen/small_text_size"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_text_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_email"
+            android:drawablePadding="@dimen/margin_start"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:textSize="@dimen/text_size_16"
+            android:hint="@string/dummy_email"
+            android:paddingBottom="@dimen/margin_10"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:textSize="@dimen/small_text_size"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edit_text_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_lock"
+            android:hint="@string/hash"
+            android:textSize="@dimen/text_size_16"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:drawablePadding="@dimen/margin_start"
+            android:paddingBottom="@dimen/margin_10"
+            android:inputType="textPassword"
+            android:maxLines="1"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/forgotPasswordText"
+            style="@style/normal_text_style"
+            android:layout_gravity="end"
+            android:textSize="@dimen/text_size_14"
+            android:layout_marginTop="@dimen/margin_start"
+            android:layout_marginEnd="@dimen/margin_24"
+            android:gravity="end"
+            android:text="@string/forgot_your_password" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/login_button"
+            style="@style/normal_button_style"
+            android:layout_width="match_parent"
+            android:textSize="@dimen/text_size_16"
+            android:layout_marginStart="@dimen/margin_start"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginEnd="@dimen/margin_start"
+            android:text="@string/login" />
+
+        <!-- sign up view -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/registerTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_start"
+            android:textAlignment="center"
+            android:textSize="@dimen/text_size_14"
+            android:paddingStart="@dimen/sign_up_text_margin"
+            android:paddingEnd="@dimen/margin_5"
+            android:text="@string/don_have_account" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

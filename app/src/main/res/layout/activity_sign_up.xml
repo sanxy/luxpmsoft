@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignUpActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_zero"
+            android:layout_marginTop="@dimen/large_button_size"
+            android:layout_marginBottom="@dimen/margin_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/gradation" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/logo_text"
+            style="@style/sign_up_text_style"
+            android:text="@string/register"
+            android:textColor="#0A0A0A"
+            android:textSize="@dimen/large_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            app:layout_constraintVertical_bias="0.011" />
+
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start"
+            android:layout_marginTop="@dimen/button_height_50"
+            android:layout_marginEnd="@dimen/margin_start"
+            android:layout_marginBottom="@dimen/margin_start"
+            android:orientation="vertical"
+            android:weightSum="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo_text">
+
+            <!-- Name -->
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/sign_up_text_style"
+                android:text="@string/name" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_text_name"
+                style="@style/sign_up_edit_text_style"
+                android:hint="@string/my_name"
+                android:inputType="text" />
+
+            <!-- Mobile number -->
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/sign_up_text_style"
+                android:text="@string/mobile_number" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_text_mobile_number"
+                style="@style/sign_up_edit_text_style"
+                android:hint="@string/default_number"
+                android:inputType="number" />
+
+            <!-- Date of Birth -->
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/sign_up_text_style"
+                android:text="@string/dob" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_text_dob"
+                style="@style/sign_up_edit_text_style"
+                android:hint="@string/default_dob"
+                android:inputType="text" />
+
+            <!-- Email -->
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/sign_up_text_style"
+                android:text="@string/email" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_text_email"
+                style="@style/sign_up_edit_text_style"
+                android:hint="@string/default_email"
+                android:inputType="textEmailAddress" />
+
+            <!-- Password -->
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/sign_up_text_style"
+                android:text="@string/password" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_text_password"
+                style="@style/sign_up_edit_text_style"
+                android:hint="@string/hash"
+                android:inputType="textPassword" />
+
+            <!-- Retype Password -->
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/sign_up_text_style"
+                android:text="@string/password_again" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_text_password_again"
+                style="@style/sign_up_edit_text_style"
+                android:hint="@string/hash"
+                android:inputType="textPassword" />
+
+            <!-- first checkbox row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="@dimen/margin_zero"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/custom_checkbox_rounded"
+                        android:checked="true" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/at_least_8_characters" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/margin_zero"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/custom_checkbox_rounded" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/at_least_one_upper_case" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- second checkbox row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:layout_width="@dimen/margin_zero"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/custom_checkbox_rounded" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/at_least_one_number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/margin_zero"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/custom_checkbox_rounded" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/one_special_character" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Terms & condition -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/terms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/custom_checkbox_square"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/terms_condition" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/sign_up_button"
+                style="@style/normal_button_style"
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/margin_start"
+                android:layout_marginTop="@dimen/default_margin"
+                android:layout_marginEnd="@dimen/margin_start"
+                android:text="@string/sign_up"
+                android:textSize="@dimen/text_size_16" />
+
+            <!-- login up view -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/loginTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_start"
+                android:paddingStart="@dimen/sign_up_text_margin"
+                android:paddingEnd="@dimen/margin_5"
+                android:text="@string/already_have_an_account"
+                android:textAlignment="center"
+                android:textSize="@dimen/default_text_size" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
